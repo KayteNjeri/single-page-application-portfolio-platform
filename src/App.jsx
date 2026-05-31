@@ -7,9 +7,11 @@ import SearchAProject from "./components/ProjectsContainer/SearchAProject/Search
 import ListofProjects from "./components/ProjectsContainer/ListofProjects/ListofProjects";
 
 function App() {
+  // State for Title input field
   const [title, setTitle] = useState("");
+  // State for Description input field
   const [description, setDescription] = useState("");
-
+  // State for storing the projects
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -29,29 +31,29 @@ function App() {
   ]);
 
   const [searchTerm, setSearchTerm] = useState("");
-
+    //a function to add a new project
     const addProject = (e) => {
-      e.preventDefault();
+      e.preventDefault(); //prevent page refresh when a form is submitted
 
-      if (!title.trim() || !description.trim()) return;
-
+      if (!title.trim() || !description.trim()) return; //helps avoid adding empty projects
+      //creation of a new project
       const newProject = {
         id: Date.now(),
         title,
         description,
         };
-
+        // add projects to the existing list
       setProjects([...projects, newProject]);
-      setTitle("");
-      setDescription("");
+      setTitle(""); //clear title input field
+      setDescription(""); //clear description input field
       };
-
+      //Function to delete a project
     const deleteProject = (id) => {
       setProjects(
         projects.filter((project) => project.id !== id)
         );
       };
-    
+    //function to filter projects using search
     const filteredProjects = projects.filter((project) =>
       project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -59,22 +61,22 @@ function App() {
 
     return (
       <div>
-        <Header />
+        <Header /> //page header
 
-        <AddAProjectForm 
+        <AddAProjectForm //add a project form
           title={title}
           description={description}
           setTitle={setTitle}
           setDescription={setDescription}
           addProject={addProject}/>
 
-        <section className="projects-container">
+        <section className="projects-container"> //projects section
           
-        <SearchAProject
+        <SearchAProject //search a project
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}/>
 
-        <ListofProjects
+        <ListofProjects //display all the projects
           projects={filteredProjects}
           deleteProject={deleteProject}/>
 

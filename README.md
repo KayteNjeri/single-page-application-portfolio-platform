@@ -33,7 +33,7 @@ src/
 │   │   └── AddAProjectForm.jsx
 │   │
 │   └── ProjectsContainer/
-│       ├── SearchAProject/
+│       ├── SearchAProject/SearchAProject
 │       │   └── SearchAProjectBar.jsx
 │       │
 │       └── ListofProjects/

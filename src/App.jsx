@@ -19,26 +19,37 @@ function App() {
         </section>
 
         <section className="projects-container">
-          <h3>Our Projects</h3>
-
+          
           <form> 
-            <input type="text" placeholder="Search Projects" />
+            <input type="text" placeholder="Search a Project..." />
             <button type="submit">Search</button>
           </form>
        
           <ul>
-            <li>
+           <li>
+            <button className="delete-button">X</button>
+            <div>
               <h3>Project 1</h3>
               <p>Description of the project</p>
+            </div>
             </li>
-             <li>
+            
+            <li>
+            <button className="delete-button">X</button>
+            <div>
               <h3>Project 2</h3>
               <p>Description of the project</p>
+            </div>
             </li>
-             <li>
+          
+            <li>
+            <button className="delete-button">X</button>
+            <div>
               <h3>Project 3</h3>
               <p>Description of the project</p>
+            </div>
             </li>
+  
           </ul>
         </section>
       </div>

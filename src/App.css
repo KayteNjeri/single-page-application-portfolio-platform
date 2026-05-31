@@ -91,14 +91,17 @@ h1 {
   color: red;
 }
 
+/* Tablet view */
 @media (max-width: 768px) {
   .add-project,
   .projects-container {
     width: 95%;
     padding: 15px;
   }
+}
 
-  @media (max-width: 480px) {
+/* Mobile view */
+@media (max-width: 480px) {
   h1 {
     font-size: 1.6rem;
     line-height: 1.2;

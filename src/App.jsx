@@ -1,6 +1,11 @@
 import { useState } from "react";
 import './App.css';
 
+import Header from "./components/Header/Header";
+import AddAProjectForm from "./components/AddAProjectForm/AddAProjectForm";
+import SearchAProject from "./components/ProjectsContainer/SearchAProject/SearchAProject/SearchAProjectBar";
+import ListofProjects from "./components/ProjectsContainer/ListofProjects/ListofProjects";
+
 function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -54,61 +59,26 @@ function App() {
 
     return (
       <div>
-        <section>
-          <h1>Personal Project Showcase App</h1>
-        </section>
+        <Header />
 
-        <section className="add-project">
-          <form onSubmit={addProject}>
-            <h1>Add Project</h1>
-            <h3>Title</h3>
-            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}/>
-            <h3>Description</h3>
-            <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
-            <button type="submit">Add</button>
-          </form>
-        </section>
+        <AddAProjectForm 
+          title={title}
+          description={description}
+          setTitle={setTitle}
+          setDescription={setDescription}
+          addProject={addProject}/>
 
         <section className="projects-container">
           
-          <form onSubmit={(e) => e.preventDefault()}> 
-            <input type="text" 
-            placeholder="Search a Project..." 
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}/>
-            <button type="submit">Search</button>
-          </form>
-       
-          <ul>
-            {filteredProjects.map((project) => (
-              <li key={project.id}>
-                <button 
-                className="delete-button" onClick={() => deleteProject(project.id)}>X</button>
-                <div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                </div>
-              </li>
-            ))}
-            
-           {/*<li>
-            <button className="delete-button">X</button>
-            <div>
-              <h3>Project 2</h3>
-              <p>Description of the project</p>
-            </div>
-            </li>
-          
-            <li>
-            <button className="delete-button">X</button>
-            <div>
-              <h3>Project 3</h3>
-              <p>Description of the project</p>
-            </div>
-            </li>
-            */}
-  
-          </ul>
+        <SearchAProject
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}/>
+
+        <ListofProjects
+          projects={filteredProjects}
+          deleteProject={deleteProject}/>
+
+         
         </section>
       </div>
   );

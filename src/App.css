@@ -1,0 +1,107 @@
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.1;
+}
+
+.add-project {
+  border: 1px solid #ccc;
+  margin: 30px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.add-project form {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.add-project h2 {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.add-project h3 {
+  text-align: left;
+  margin: 5px 0 2px 0;
+}
+
+.add-project input,
+.add-project textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.add-project button {
+  width: fit-content;
+  padding: 8px 16px;
+}
+
+.projects-container {
+  border: 1px solid #ccc;
+  margin: 30px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.projects-container form {
+  margin-top: 5px;
+  display: flex;
+  gap: 12px;
+}
+
+.projects-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.projects-container button {
+   padding: 8px 16px;
+}
+
+.projects-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.projects-container li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.projects-container h3 {
+  text-align: left;
+  margin: 0;
+}
+.project-details p {
+  margin: 5px 0 0;
+}
+.delete-button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+.delete-button:hover {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .add-project,
+  .projects-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  @media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    padding: 0 10px;
+  }
+}

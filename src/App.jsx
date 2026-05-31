@@ -61,22 +61,22 @@ function App() {
 
     return (
       <div>
-        <Header /> //page header
+        <Header /> 
 
-        <AddAProjectForm //add a project form
+        <AddAProjectForm 
           title={title}
           description={description}
           setTitle={setTitle}
           setDescription={setDescription}
           addProject={addProject}/>
 
-        <section className="projects-container"> //projects section
+        <section className="projects-container"> 
           
-        <SearchAProject //search a project
+        <SearchAProject 
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}/>
 
-        <ListofProjects //display all the projects
+        <ListofProjects 
           projects={filteredProjects}
           deleteProject={deleteProject}/>
 

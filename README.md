@@ -53,6 +53,9 @@ src/
 ├── main.jsx
 └── index.css
 ```
+## Prerequisites
+
+You only need a modern web browser (Chrome, Firefox, Safari, Edge) to run this application.
 
 ## Installation
 
@@ -85,7 +88,7 @@ npm run dev
 Open your browser and navigate to:
 
 ```text
-http://localhost:5174
+http://localhost:5173
 ```
 
 ## Running Tests
@@ -94,12 +97,6 @@ Execute all unit tests:
 
 ```bash
 npm test
-```
-
-Run tests in watch mode:
-
-```bash
-npm test -- --watch
 ```
 
 ## Test Coverage
@@ -128,12 +125,13 @@ Features include:
 
 ## Usage
 
-1. Enter a project title and description.
-2. Click **Add Project** to save it.
-3. Use the search bar to filter projects.
-4. Click the delete button to remove a project.
+1. Enter a project title
+2. Enter a project description.
+3. Click **Add** to save it.
+4. Use the search bar to search/filter projects.
+5. Click the delete button to remove a project.
 
-## Future Improvements
+## Roadmap / Future Improvements
 
 * Edit existing projects
 * Persist projects using local storage
@@ -148,16 +146,15 @@ This project demonstrates:
 
 * React component architecture
 * State management using `useState`
-* Props and component communication
+* Props and component relationship
 * Event handling
-* Conditional rendering
 * Responsive web design
 * Unit testing with Jest and React Testing Library
 * Code organization and maintainability
 
 ## Author
 
-Developed as part of a React Single Page Application project.
+Developed as part of a React Single Page Application project for showcasing projects.
 
 ## Licence
 
